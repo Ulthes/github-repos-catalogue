@@ -17,15 +17,24 @@
 
         function initialization() {
             getRepos();
+            getRepo("sr", "tasks");
         }
 
         function getRepos() {
             GithubRepository.getAllRepos().then(
                 function (response) {
                     vm.repositories = response;
+
+                    console.log(response);
                 },
-                function (reason) {
-                });
+                function (reason) {});
+        }
+
+        function getRepo(owner, repo) {
+            GithubRepository.getRepo({owner: owner, repo: repo}).then(function(response){
+            }, function(reason){
+                
+            })
         }
     }
 })()
