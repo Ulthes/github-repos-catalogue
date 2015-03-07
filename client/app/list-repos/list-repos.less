@@ -1,0 +1,109 @@
+.git-repo-item {
+    background-repeat: repeat-x;
+    border: 1px solid rgb(81, 92, 101);
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    margin: 4px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(81, 92, 101);
+    width: 24%;
+    text-align: left;
+    color: #B6B6B6;
+    background-image: radial-gradient(ellipse at top, #515c65, #3a4045);
+    -webkit-transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, ease;
+    -moz-transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, ease;
+    -o-transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, ease;
+    -ms-transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, ease;
+    transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, ease;
+    > .repo {
+        position: relative;
+        > div {
+            display: inline-block;
+            text-align: left;
+        }
+        > .icon {
+            float: left;
+            font-size: 3em;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+        > .info {
+            margin: 6px;
+            > .owner {}
+            > .name {
+                font-weight: bold;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0px 3px 14px #2A3137 inset;
+        color: #dedede;
+        border-color: #636F7A;
+        .icon {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    &:active {
+        box-shadow: 0px 3px 27px #15171A inset;
+        color: #FFF;
+        border-color: #868E96;
+    }
+    &.ng-enter.ng-enter-active {
+        -webkit-animation: 0.3s slide-in linear;
+        -moz-animation: 0.3s slide-in linear;
+        -o-animation: 0.3s slide-in linear;
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

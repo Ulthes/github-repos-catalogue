@@ -5,6 +5,7 @@ angular.module('gitHubReposCtlgApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+    'ngAnimate',
   'ui.bootstrap'
 ])
   .config(function ($routeProvider, $locationProvider) {
