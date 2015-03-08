@@ -14,7 +14,7 @@
         vm.repositories = [];
         vm.since = 0;
         
-        vm.goToNexPage = goToNextPage;
+        vm.goToNextPage = goToNextPage;
         vm.goToPreviousPage = goToPreviousPage;
         
         initialization();

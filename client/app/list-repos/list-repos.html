@@ -1,7 +1,6 @@
 <div class="page" ng-if="!!vm.repositories && vm.repositories.length > 0">
-    <button type="button" class="btn btn-default" ng-click="vm.goToPreviousPage()"><i class="fa fa-chevron-left"></i>
+    <button ng-class="{'disabled': vm.since <= 100}" type="button" class="btn btn-default" ng-click="vm.goToPreviousPage()"><i class="fa fa-chevron-left"></i>
     </button>
-
     <button type="button" class="btn btn-default" ng-click="vm.goToNextPage()"><i class="fa fa-chevron-right"></i>
     </button>
 
