@@ -40,7 +40,10 @@
             }
         }
     }
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
         box-shadow: 0px 3px 14px #2A3137 inset;
         color: #dedede;
         border-color: #636F7A;
@@ -61,6 +64,26 @@
         -webkit-animation: 0.3s slide-in linear;
         -moz-animation: 0.3s slide-in linear;
         -o-animation: 0.3s slide-in linear;
+    }
+}
+
+.page {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 6px;
+    button.btn.btn-default {
+        &:hover {
+            color: #A0A7AD;
+            background-color: #3A4045;
+            border-color: #5B6369;
+        }
+        &:focus {
+            outline: none;
+        }
+        color: #A0A7AD;
+        background-color: #464E56;
+        border-color: #5B6369;
     }
 }
 

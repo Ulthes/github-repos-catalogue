@@ -1,0 +1,163 @@
+.jumbotron {
+    -webkit-animation: 1s show-up ease;
+    -moz-animation: 1s show-up ease;
+    -o-animation: 1s show-up ease;
+    background-color: #22282D;
+    .events-list {
+        display: inline-block;
+        text-align: center;
+        > .event {
+            background-repeat: repeat-x;
+            border: 1px solid #515C65;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: #515C65;
+            color: #B6B6B6;
+            transition: box-shadow 0.2s ease 0s, color 0.2s ease 0s, border-color 0.2s ease 0s, all 0s ease 0s;
+            display: block;
+            margin: 4px;
+            text-align: left;
+            background-image: radial-gradient(ellipse at center top, #515C65, #3A4045);
+            position: relative;
+            height: 100px;
+            max-height: 100px;
+            width: 800px;
+            max-width: 800px;
+            > div {
+                text-align: left;
+                display: inline-block;
+            }
+            .user-info {
+                border: 1px solid #273139;
+                border-radius: 3px;
+                text-align: center;
+                overflow: hidden;
+                padding: 5px;
+                height: 100%;
+                background-color: #1A2026;
+                width: 100%;
+                max-width: 108px;
+                display: inline-block;
+                .actor {
+                    max-width: 100px;
+                    > .login {
+                        font-weight: bold;
+                        display: block;
+                    }
+                    img {
+                        max-width: 50px;
+                        display: block;
+                        margin: 0px auto;
+                    }
+                }
+            }
+            .info {
+                border: 1px solid #22282D;
+                height: 100%;
+                overflow: hidden;
+                padding: 5px;
+                background-color: #2B363F;
+                border-radius: 3px;
+                display: inline-block;
+                width: 85%;
+                .event-type {
+                    display: block;
+                }
+                .payload {
+                    .date {
+                        display: inline;
+                    }
+                }
+                span {
+                    font-weight: bold;
+                }
+            }
+            &.ng-enter.ng-enter-active {
+                -webkit-animation: 0.5s slide-in linear;
+                -moz-animation: 0.5s slide-in linear;
+                -o-animation: 0.5s slide-in linear;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes slide-in {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -10,16 +10,17 @@
     function GithubRepository($http, $q) {
         var service = {
             getAllRepos: getAllRepos,
-            getRepo: getRepo
+            getRepo: getRepo,
+            getRepoEvents: getRepoEvents
         }
 
         return service;
 
 
-        function getAllRepos() {
+        function getAllRepos(since) {
             var deferred = $q.defer();
 
-            $http.get("https://api.github.com/repositories")
+            $http.get("https://api.github.com/repositories" + "?since=" + since)
                 .success(function (data, status, headers, config) {
                     deferred.resolve(data);
                 })
@@ -30,10 +31,23 @@
             return deferred.promise;
         }
         
-        function getRepo(repoAndOwner) {
+        function getRepo(ownerAndRepoObj) {
             var deferred = $q.defer();
             
-            $http.get("https://api.github.com/repos/"+repoAndOwner.owner+"/"+repoAndOwner.repo)
+            $http.get("https://api.github.com/repos/"+ownerAndRepoObj.owner+"/"+ownerAndRepoObj.repo)
+            .success(function(data, status, headers, config){
+                deferred.resolve(data);
+            })
+            .error(function(data, status, headers, config){
+                deferred.reject(data);
+            })
+            return deferred.promise;
+        }
+        
+        function getRepoEvents(ownerAndRepoObj) {
+            var deferred = $q.defer();
+            
+            $http.get("https://api.github.com/repos/"+ownerAndRepoObj.owner+"/"+ownerAndRepoObj.repo+"/events")
             .success(function(data, status, headers, config){
                 deferred.resolve(data);
             })

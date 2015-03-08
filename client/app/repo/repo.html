@@ -1,3 +1,43 @@
-<div class="col-md-12">
-This is the repo view.
+<div class="jumbotron repo">
+    <h1>{{vm.RepoDetails.name}}</h1>
+    <h2>{{vm.RepoDetails.description}}</h2>
+    <div class="size"><span><i class="fa fa-hdd-o"></i></span>{{vm.RepoDetails.size}} KB</div>
+    <div class="forks"><span><i class="fa fa-code-fork"></i></span>{{vm.RepoDetails.forks}}</div>
+    <div><span>Created at:</span>{{vm.RepoDetails.created_at|date: 'medium'}}</div>
+    <div><span>Last updated at:</span>{{vm.RepoDetails.updated_at|date: 'medium'}}</div>
+    <h3>Events:</h3>
+    <div class="events-list">
+        <div class="event" ng-repeat="event in vm.RepoDetails.events">
+            <div class="user-info">
+                <div class="actor">
+                    <span class="login">{{event.actor.login}}</span>
+                    <img ng-src="{{event.actor.avatar_url}}" />
+                </div>
+            </div>
+            <div class="info">
+                <div class="event-type">
+                    <div ng-if="event.type == 'ForkEvent'">
+                        <span>Fork</span>
+                        <i class="fa fa-code-fork"></i>
+                        <a href="{{event.payload.forkee.html_url}}">{{event.payload.forkee.html_url}}</a>
+                    </div>
+                    <div ng-if="event.type == 'WatchEvent'">
+                        <span>Watch</span>
+                        <i class="fa fa-eye"></i>
+                    </div>
+                    <div ng-if="event.type == 'IssueCommentEvent'">
+                        <span>Comment</span>
+                        <i class="fa fa-comment"></i>
+                    </div>
+                </div>
+                <div class="payload">
+                    <span>Created at: </span>
+                    <div class="date">{{event.created_at|date: 'medium'}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 ng-if="!vm.RepoDetails.events || vm.RepoDetails.events.length == 0">
+        No Events history.
+    </h3>
 </div>
