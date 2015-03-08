@@ -1,25 +1,27 @@
 <div class="page" ng-if="!!vm.repositories && vm.repositories.length > 0">
-    <button ng-class="{'disabled': vm.since <= 100}" type="button" class="btn btn-default" ng-click="vm.goToPreviousPage()"><i class="fa fa-chevron-left"></i>
-    </button>
-    <button type="button" class="btn btn-default" ng-click="vm.goToNextPage()"><i class="fa fa-chevron-right"></i>
-    </button>
-
+  <button ng-class="{'disabled': vm.since <= 0}" type="button" class="github-repos-btn btn btn-default" ng-click="vm.goToPreviousPage()"><i class="fa fa-chevron-left"></i>
+  </button>
+  <button type="button" class="github-repos-btn btn btn-default" ng-click="vm.goToNextPage()"><i class="fa fa-chevron-right"></i>
+  </button>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <a href="/repos/{{repo.owner.login}}/{{repo.name}}" class="git-repo-item" ng-repeat="repo in vm.repositories">
-                <div class="repo">
-                    <div class="icon">
-                        <i class="fa fa-github"></i>
-                    </div>
-                    <div class="info">
-                        <div class="owner">{{repo.owner.login}}</div>
-                        <div class="name">{{repo.name}}</div>
-                    </div>
-                </div>
-            </a>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="/repos/{{repo.owner.login}}/{{repo.name}}" class="git-repo-item" ng-repeat="repo in vm.repositories">
+        <div class="repo">
+          <div class="icon">
+            <i class="fa fa-github"></i>
+          </div>
+          <div class="info">
+            <div class="owner">{{repo.owner.login}}</div>
+            <div class="name">{{repo.name}}</div>
+          </div>
         </div>
+      </a>
     </div>
+  </div>
 </div>
-
+<div ng-if="vm.NoData && (!vm.repositories || vm.repositories.length == 0)">
+  <h1>Nothing to show :(</h1>
+  <h2>The website has exceeded 60 requests to Github API per hour, you will have to wait an hour to proceed.</h2>
+</div>

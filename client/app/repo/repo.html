@@ -1,10 +1,16 @@
-<div class="jumbotron repo">
+<div class="go-back">
+    <a type="button" class="github-repos-btn btn btn-default" href="/repos">
+      <i class="fa fa-reply"></i>
+    </a>
+  </div>
+
+<div ng-if="!!vm.RepoDetails" class="jumbotron">
     <h1>{{vm.RepoDetails.name}}</h1>
     <h2>{{vm.RepoDetails.description}}</h2>
-    <div class="size"><span><i class="fa fa-hdd-o"></i></span>{{vm.RepoDetails.size}} KB</div>
-    <div class="forks"><span><i class="fa fa-code-fork"></i></span>{{vm.RepoDetails.forks}}</div>
-    <div><span>Created at:</span>{{vm.RepoDetails.created_at|date: 'medium'}}</div>
-    <div><span>Last updated at:</span>{{vm.RepoDetails.updated_at|date: 'medium'}}</div>
+    <div class="size"><span><i class="fa fa-hdd-o"></i>&nbsp;Size:&nbsp;</span>{{vm.RepoDetails.size}} KB</div>
+    <div class="forks"><span><i class="fa fa-code-fork"></i>&nbsp;Forks:&nbsp;</span>{{vm.RepoDetails.forks}}</div>
+    <div><span>Created at:&nbsp;</span>{{vm.RepoDetails.created_at|date: 'medium'}}</div>
+    <div><span>Last updated at:&nbsp;</span>{{vm.RepoDetails.updated_at|date: 'medium'}}</div>
     <h3>Events:</h3>
     <div class="events-list">
         <div class="event" ng-repeat="event in vm.RepoDetails.events">
@@ -40,4 +46,8 @@
     <h3 ng-if="!vm.RepoDetails.events || vm.RepoDetails.events.length == 0">
         No Events history.
     </h3>
+</div>
+<div ng-if="!!vm.NoData && !vm.RepoDetails">
+  <h1>Nothing to show :(</h1>
+  <a href="https://www.youtube.com/watch?v=igx0nazlpfE" class="fa fa-empire"></a>
 </div>

@@ -7,97 +7,117 @@
  */
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 body {
+  background-color: #2A3137;
+  color: white;
+  text-shadow: 1px 1px #2A3137;
+  text-align: center;
+}
+.github-repos-btn.btn.btn-default {
+  &:hover {
+    color: #A0A7AD;
+    background-color: #3A4045;
+    border-color: #5B6369;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.disabled {
+    color: #464E55;
     background-color: #2A3137;
-    color: white;
-    text-align: center;
+    border-color: #383E44;
+    pointer-events: none;
+  }
+  color: #A0A7AD;
+  background-color: #464E56;
+  border-color: #5B6369;
 }
 
 @-webkit-keyframes slide-in {
-    0% {
-        transform: translateY(-10%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-in {
-    0% {
-        opacity: translateY(-10%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes slide-in {
-    0% {
-        transform: translateY(-10%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-o-keyframes slide-in {
-    0% {
-        transform: translateY(-10%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes show-up {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes show-up {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes show-up {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes show-up {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // injector

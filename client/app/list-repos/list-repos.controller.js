@@ -22,26 +22,24 @@
     }
 
     function goToNextPage() {
-      getRepos(vm.since + vm.repositories.length);
+      vm.since += vm.repositories.length;
+      getRepos(vm.since);
     }
 
     function goToPreviousPage() {
-      var difference = vm.since - vm.repositories.length;
-      if (difference <= 0) {
-        vm.since = 0;
-      }
-      console.log(difference);
-      getRepos(difference >= 0 ? difference : 0);
+      vm.since -= vm.repositories.length;
+      vm.since =  (vm.since < 0) ? 0 : vm.since;
+      getRepos(vm.since);
     }
 
     function getRepos(since) {
       GithubRepository.getAllRepos(since).then(
         function (response) {
-          console.log(response)
           vm.repositories = response;
-          vm.since += vm.repositories.length;
         },
-        function (reason) {});
+        function (reason) {
+          vm.NoData = true;
+        });
     }
   }
 

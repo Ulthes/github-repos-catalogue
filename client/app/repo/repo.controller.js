@@ -20,7 +20,7 @@
       }).then(function (response) {
         vm.RepoDetails = response;
       }, function (reason) {
-
+          vm.NoData = true;
       })
     }
   }

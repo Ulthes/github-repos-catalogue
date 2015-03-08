@@ -12,7 +12,7 @@
       getAllRepos: getAllRepos,
       getRepo: getRepo,
       getRepoEvents: getRepoEvents
-    }
+    };
 
     return service;
 
@@ -40,7 +40,8 @@
         })
         .error(function (data, status, headers, config) {
           deferred.reject(data);
-        })
+        });
+
       return deferred.promise;
     }
 
@@ -53,7 +54,8 @@
         })
         .error(function (data, status, headers, config) {
           deferred.reject(data);
-        })
+        });
+
       return deferred.promise;
     }
   }
