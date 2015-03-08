@@ -1,4 +1,4 @@
-<div class="page" >
+<div class="page" ng-if="!!vm.repositories && vm.repositories.length > 0">
     <button type="button" class="btn btn-default" ng-click="vm.goToPreviousPage()"><i class="fa fa-chevron-left"></i>
     </button>
 
@@ -24,4 +24,3 @@
     </div>
 </div>
 
-<!--ng-if="!!vm.repositories && vm.repositories.length > 0"-->

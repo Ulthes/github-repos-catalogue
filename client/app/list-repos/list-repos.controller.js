@@ -17,7 +17,7 @@
         vm.goToNexPage = goToNextPage;
         vm.goToPreviousPage = goToPreviousPage;
         
-        //initialization();
+        initialization();
 
         function initialization() {
             getRepos(0);
