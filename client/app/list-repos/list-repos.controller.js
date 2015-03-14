@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gitHubReposCtlgApp')
+    .module('GitHubReposCtlg.ListRepos')
     .controller('ListReposCtrl', ListReposCtrl);
 
   ListReposCtrl.$inject = ['GithubRepository'];

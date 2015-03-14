@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gitHubReposCtlgApp')
+    .module('GitHubReposCtlg.Services')
     .service('githubService', githubService);
 
   githubService.$inject = ['GithubRepository', '$q'];
