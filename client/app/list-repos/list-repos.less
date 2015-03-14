@@ -33,10 +33,15 @@
             transition: all 0.4s ease;
         }
         > .info {
+            max-width: 60%;
             margin: 6px;
             > .owner {}
             > .name {
+                max-weight: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 font-weight: bold;
+                white-space: nowrap;
             }
         }
     }
