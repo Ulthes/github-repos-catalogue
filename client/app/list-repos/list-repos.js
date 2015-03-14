@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-    .module('gitHubReposCtlgApp')
+    .module('GitHubReposCtlg.ListRepos')
     .config(config);
 
   function config($routeProvider) {

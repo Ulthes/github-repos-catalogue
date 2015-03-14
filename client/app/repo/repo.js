@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gitHubReposCtlgApp')
+    .module('GitHubReposCtlg.Repo')
     .config(config);
 
   function config($routeProvider) {

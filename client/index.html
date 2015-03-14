@@ -70,8 +70,15 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,client}) app/app.js -->
+    <script src="app/extensions.module.js"></script>
+    <script src="app/core.module.js"></script>
+    <script src="app/app.module.js"> </script>
     <script src="app/app.js"></script>
     <!-- injector:js -->
+    <script src="app/list-repos/list-repos.module.js"></script>
+    <script src="app/repo/repo.module.js"></script>
+    <script src="app/repositories/repositories.module.js"></script>
+    <script src="app/services/services.module.js"></script>
     <script src="app/list-repos/list-repos.controller.js"></script>
     <script src="app/list-repos/list-repos.js"></script>
     <script src="app/repo/repo.controller.js"></script>

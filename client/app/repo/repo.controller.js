@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gitHubReposCtlgApp')
+    .module('GitHubReposCtlg.Repo')
     .controller('RepoCtrl', RepoCtrl);
 
   RepoCtrl.$inject = ['githubService', '$routeParams', '$location'];

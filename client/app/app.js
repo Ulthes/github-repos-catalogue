@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gitHubReposCtlgApp', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute', 'ngAnimate', 'ui.bootstrap'])
+    .module('gitHubReposCtlgApp')
     .config(function ($locationProvider) {
       $locationProvider.html5Mode(true);
     });
